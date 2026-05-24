@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Todo List</h1>
+        
+        <!-- Input Bagian -->
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Masukkan tugas baru...">
+            <button onclick="addTodo()">Tambah</button>
+        </div>
+
+        <!-- Daftar Todo -->
+        <ul id="todoList"></ul>
+
+        <!-- Stats -->
+        <div class="stats">
+            <span id="totalTodos">Total: 0</span> | 
+            <span id="completedTodos">Selesai: 0</span>
+        </div>
+    </div>
+
+    <script src="script.js">
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("service-worker.js");
+            }
+    </script>
+</body>
+</html>
